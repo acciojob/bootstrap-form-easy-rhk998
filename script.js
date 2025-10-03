@@ -1,4 +1,3 @@
-//your code here
 // Simple client-side validation to show red feedback after submit
 const form = document.getElementById('internship-form');
 
@@ -7,7 +6,7 @@ const fields = {
   lastName: document.getElementById('last-name-input'),
   email: document.getElementById('email-input'),
   college: document.getElementById('college-input'),
-  graduationYear: document.getElementById('graduation-year'),
+  graduationYear: document.getElementById('grad-year-select'), // ✅ Corrected
   rollNo: document.getElementById('roll-no-input'),
   conditions: document.getElementById('conditions-checkbox')
 };
@@ -82,8 +81,6 @@ form.addEventListener('submit', function(e) {
   if (!fields.conditions.checked) {
     showError('conditions', 'You must agree before submitting.');
     valid = false;
-  } else {
-    if (errors.conditions) errors.conditions.style.display = 'none';
   }
 
   if (valid) {
