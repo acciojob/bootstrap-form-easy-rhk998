@@ -5,99 +5,82 @@
   <title>Internship Form</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    .form-label { font-size: 14px; color: #333; margin-bottom: 6px; display: inline-block; }
-    .form-control,
-    .form-select {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 14px;
-      width: 100%;
-    }
-    .form-check-input { width: 16px; height: 16px; }
-    .invalid-feedback {
-      color: #d93025;
-      font-size: 12px;
-      display: none;
-      margin-top: 4px;
-    }
-    input.invalid,
-    select.invalid {
-      border-color: #d93025;
-    }
-  </style>
 </head>
 <body>
 
-  <div class="form-card" aria-label="Internship Form">
-    <h2>Internship Form</h2>
+<div class="form-card" aria-label="Internship Form">
+  <h2>Internship Form</h2>
 
-    <form id="internship-form" novalidate>
-      <div class="row">
-        <div class="field">
-          <label for="first-name-input" class="form-label">First Name</label>
-          <input type="text" id="first-name-input" name="firstName" placeholder="First name" class="form-control" required />
-          <span class="invalid-feedback" id="first-name-error">First name required!</span>
-        </div>
-
-        <div class="field">
-          <label for="last-name-input" class="form-label">Last Name</label>
-          <input type="text" id="last-name-input" name="lastName" placeholder="Last name" class="form-control" required />
-          <span class="invalid-feedback" id="last-name-error">Last name required!</span>
-        </div>
-
-        <div class="field">
-          <label for="email-input" class="form-label">Email Address</label>
-          <input type="email" id="email-input" name="email" placeholder="xyz@abc.com" class="form-control" required />
-          <span class="invalid-feedback" id="email-error">Email required!</span>
-        </div>
+  <form id="internship-form" novalidate>
+    <div class="row">
+      <!-- First Name -->
+      <div class="field">
+        <label for="first-name-input" class="form-label">First Name</label>
+        <input type="text" id="first-name-input" name="firstName" placeholder="First name" class="form-control" required />
+        <span class="invalid-feedback" id="first-name-error">First name required!</span>
       </div>
 
-      <div class="row">
-        <div class="field">
-          <label for="college-input" class="form-label">College</label>
-          <input type="text" id="college-input" name="college" placeholder="College name" class="form-control" required />
-          <span class="invalid-feedback" id="college-error">Please provide a valid college.</span>
-        </div>
-
-        <div class="field">
-          <label for="grad-year-select" class="form-label">Graduation Year</label>
-          <select id="grad-year-select" name="graduationYear" class="form-select" required>
-            <option value="">Choose...</option>
-            <option value="2020">2020</option>
-            <option value="2021">2021</option>
-            <option value="2022">2022</option>
-            <option value="2023">2023</option>
-          </select>
-          <span class="invalid-feedback" id="graduation-year-error">Please select a valid Graduation Year.</span>
-        </div>
-
-        <div class="field">
-          <label for="roll-no-input" class="form-label">Roll No.</label>
-          <input type="text" id="roll-no-input" name="rollNo" placeholder="Roll No." class="form-control" required />
-          <span class="invalid-feedback" id="roll-no-error">Please provide a valid Roll no.</span>
-        </div>
+      <!-- Last Name -->
+      <div class="field">
+        <label for="last-name-input" class="form-label">Last Name</label>
+        <input type="text" id="last-name-input" name="lastName" placeholder="Last name" class="form-control" required />
+        <span class="invalid-feedback" id="last-name-error">Last name required!</span>
       </div>
 
-      <div class="row" style="align-items: center;">
-        <div class="field">
-          <div style="display:flex; align-items:center; gap:8px;">
-            <input type="checkbox" id="conditions-checkbox" name="conditions" class="form-check-input" required />
-            <label for="conditions-checkbox" class="form-label" style="font-size:14px; margin:0;">
-              Agree to terms and conditions
-            </label>
-          </div>
-          <span class="invalid-feedback" id="conditions-error">You must agree before submitting.</span>
-        </div>
+      <!-- Email -->
+      <div class="field">
+        <label for="email-input" class="form-label">Email Address</label>
+        <input type="email" id="email-input" name="email" placeholder="xyz@abc.com" class="form-control" required />
+        <span class="invalid-feedback" id="email-error">Email required!</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- College -->
+      <div class="field">
+        <label for="college-input" class="form-label">College</label>
+        <input type="text" id="college-input" name="college" placeholder="College name" class="form-control" required />
+        <span class="invalid-feedback" id="college-error">Please provide a valid college.</span>
       </div>
 
-      <div class="actions">
-        <button type="submit" id="submit-btn">Submit form</button>
+      <!-- Graduation Year -->
+      <div class="field">
+        <label for="grad-year-select" class="form-label">Graduation Year</label>
+        <select id="grad-year-select" name="graduationYear" class="form-select" required>
+          <option value="">Choose...</option>
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+          <option value="2023">2023</option>
+        </select>
+        <span class="invalid-feedback" id="graduation-year-error">Please select a valid Graduation Year.</span>
       </div>
-    </form>
-  </div>
 
-  <script src="script.js"></script>
+      <!-- Roll No. -->
+      <div class="field">
+        <label for="roll-no-input" class="form-label">Roll No.</label>
+        <input type="text" id="roll-no-input" name="rollNo" placeholder="Roll No." class="form-control" required />
+        <span class="invalid-feedback" id="roll-no-error">Please provide a valid Roll no.</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Terms and Conditions -->
+      <div class="field">
+        <label class="form-label">
+          <input type="checkbox" id="conditions-checkbox" name="conditions" class="form-check-input" required />
+          Agree to terms and conditions
+        </label>
+        <span class="invalid-feedback" id="conditions-error">You must agree before submitting.</span>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button type="submit">Submit form</button>
+    </div>
+  </form>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
